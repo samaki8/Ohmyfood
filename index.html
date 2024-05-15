@@ -14,36 +14,35 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+        rel="stylesheet">
 
 <body>
     <div class="container">
         <header class="header">
-            <img class="headerLogo"
-                src="Images+et+textes+Ohmyfood/Images et textes Ohmyfood/images/logo/ohmyfood@2x.svg"
-                alt="Ohmyfood logo">
+            <div class="header__container">
+                <a href="#">
+                    <img class="headerLogo"
+                        src="Images+et+textes+Ohmyfood/Images et textes Ohmyfood/images/logo/ohmyfood@2x.svg"
+                        alt="Ohmyfood - Home">
+                </a>
+            </div>
+            <div class="header__loca">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Paris, Belleville</p>
+            </div>
+
+
         </header>
+
         <main class="main">
-            <section class="loca">
-                <form class="searchForm" action="#" method="GET">
-                    <span class="searchFormWrapicon">
-                        <i class="fas fa-map-marker-alt searchFormWrapiconIcon" aria-hidden="true"></i>
-                    </span>
-                    <input class="searchFormSearchinput" type="search" placeholder="Paris, France" size="50">
-                    <button class="searchFormSubmitinput">
-                        <span class="searchFormSubmitinputText">Rechercher</span>
-                        <i class="searchFormSubmitinputIcon fas fa-search" aria-hidden="true"></i>
-                    </button>
-                </form>
 
-
-            </section>
             <section class="hero">
                 <h2 class="hero__title">
-                    Réservez le menu qui
-                    <br>
-                    vous convient
+                    Réservez le menu qui vous convient
                 </h2>
                 <p class="hero__subtitle"> Découvrez des restaurants d'exception, séléctionnés par nos soins </p>
                 <a class="hero__btn" href="#"> Explorer nos restaurants </a>
@@ -77,11 +76,10 @@
                                     <h3>La palette du goût</h3>
                                     <p>Ménilmontant</p>
                                 </div>
-                                <div class="like">
-                                    <i class="card__like fa-solid fa-heart fa-2x"></i>
+                                <button class="like">
+                                    <i class="card__like fa-solid fa-heart fa-2x" aria-hidden="true"></i>
                                     <i class="card__like fa-regular fa-heart fa-2x"></i>
-
-                                </div>
+                                </button>
 
 
                     </a>
