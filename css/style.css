@@ -102,3 +102,35 @@ body {
 .tuto {
     padding: 2rem 1rem;
 }
+
+.tuto__steps {}
+
+.tuto__step {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #F6F6F6;
+    border-radius: 15px;
+    display: flex;
+    height: 72.38px;
+    width: 335px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.number {
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    background-color: #9356DC;
+    text-align: center;
+    align-content: center;
+    font-size: 14.18px;
+    color: #FFFFFF;
+    box-shadow: ;
+}
+
+.tuto__text {
+    margin-left: 10px;
+}
