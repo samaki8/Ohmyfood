@@ -80,8 +80,8 @@ a {
     background-color: #eaeaea;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
-.hero {
+/**************SEARCH**********/
+.search {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,13 +93,12 @@ a {
 }
 
 
-.hero__title {
-    display: flex;
+.search__heading {
+   /* display: flex;*/
     justify-content: center;
-    white-space: nowrap;
+    /*white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-    //styleName: Section Title;
+    text-overflow: ellipsis;*/
 font-family: Roboto;
 font-size: 24px;
 font-weight: 700;
@@ -109,15 +108,16 @@ text-align: center;
 }
 
 .line-break {
-    white-space: normal;
+   /* white-space: normal;*/
+    display:block
 }
 
-.hero__subtitle {
+.search__discover {
     size: 16px;
     FONT-WEIGHT: 300;
 }
 
-.hero__btn {
+.search__btn {
     background-image: linear-gradient(to bottom, #ff79da 0%, #9356DC 100%);
     border: none;
     color: white;
@@ -133,7 +133,7 @@ text-align: center;
 
 
 }
-
+/*********************fonctionnement**************/
 .tuto {
     display: flex;
     flex-direction: column;
@@ -292,7 +292,7 @@ ol {
    /* height: 100%;*/
    /* aspect-ratio: auto 340/251;*/
     margin: 2rem 0;
-    border: 2px solid red;
+    
 
 }
 
@@ -365,30 +365,37 @@ figcaption {
 
 .heart {
 
-    /* padding-right: 25px;
+    padding-right: 25px;
     height: 21px;
-    width: 22px;*/
+    width: 22px;
     font-size: 21px;
     display: flex;
     position: relative;
     justify-content: center;
+     cursor: pointer;
 }
-
-/*
-.fa-heart:before {
-    content: "\f004";
+.fas fa-heart {
+    display:none
 }
-*/
+.fas fa-heart:active {
+    color: purple;
+    background-color: linear-gradient(to bottom, #ff79da 0%, #9356DC 100%);
+}    
+.heart:hover {
+    color: purple; 
+    background-color: linear-gradient(to bottom, #ff79da 0%, #9356DC 100%);
+}
+/*    
 .restaurants_card-content>.heart>.far+.fas {
     position: absolute;
 }
-
+/*
 .restaurants_card-content>.heart>.fas {
     opacity: 0;
     color: #9356dc;
     transition: 0.2s ease-in-out;
 }
-
+*/
 .restaurants-card-name {
     font-family: roboto;
     font-size: 18px;
