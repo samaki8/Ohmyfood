@@ -2,31 +2,32 @@
 <html lang="fr">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/ico"
-        href="Images+et+textes+Ohmyfood/Images et textes Ohmyfood/images/logo/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <title>Oh my food! - Accueil</title>
     <meta name="description"
         content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les restaurants.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Ohmyfood - Accueil</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/logo/icone.png">
+    <!-- Google fonts and fontawesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e9ad2cc302.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 
 <body>
     <div class="container">
         <header class="header">
             <div class="header__container">
                 <a href="#" title="Retour à la page d'accueil">
-                    <img id="top" class="headerLogo" src="./images/logo/ohmyfood@2x.svg" alt="Ohmyfood - Home">
+                    <img id="top" class="header_Logo" src="./images/logo/ohmyfood@2x.svg" alt="Ohmyfood - Home">
                 </a>
             </div>
             <div class="header__loca">
@@ -72,7 +73,7 @@
                 </div>
                 <div class="restaurants_cards">
                     <!-- Restaurant num 1 -->
-                    <a href="./la-palette-du-gout">
+                    <a href="./restaurants/menu_la_palette_du_gout.html">
                         <article class="restaurants_card">
                             <figure>
                                 <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
@@ -91,7 +92,7 @@
                         </article>
                     </a>
                     <!-- Restaurant num 2 -->
-                    <a href="./la-note-enchantee">
+                    <a href="./restaurants/menu_la_note_enchantee.html">
                         <article class="restaurants_card">
                             <figure>
                                 <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
@@ -110,7 +111,7 @@
                         </article>
                     </a>
                     <!-- Restaurant num 3 -->
-                    <a href="./a-la-francaise">
+                    <a href="./restaurants/menu_a_la_francaise.html">
                         <article class="restaurants_card">
                             <figure>
                                 <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
@@ -130,7 +131,7 @@
                         </article>
                     </a>
                     <!-- Restaurant num 4 -->
-                    <a href="./le-delice-des-sens">
+                    <a href="./restaurants/menu_le_delice_des_sens.html">
                         <article class="restaurants_card">
                             <figure>
                                 <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
@@ -150,17 +151,17 @@
                     </a>
                 </div>
             </section>
+            <!-- Footer -->
             <footer class="footer">
-                <div class="footer__logo">
-                    <h2>ohmyfood</h2>
-                </div>
-                <div class="footer__nav">
-                    <a href=""><i class="fas fa-utensils vector"></i>Proposer un restaurant</a>
-                    <a href=""><i class="fas fa-hands-helping vector"></i>Devenir partenaire</a>
-                    <a href="">Mentions légales</a>
-                    <a href="mailto:contact@ohmyfood.fr">Contact</a>
-                    <a href="#top">Revenir en haut de page</a>
-                </div>
+                <h2 class="footer__title">Ohmyfood</h2>
+                <ul class="footer__link">
+                    <li><a href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a></li>
+                    <li><a href="#"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li>
+                        <address><a href="mailto:contact@ohmyfood.com">Contact</a></address>
+                    </li>
+                </ul>
             </footer>
         </main>
     </div>
