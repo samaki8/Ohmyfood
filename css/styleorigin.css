@@ -80,6 +80,7 @@ a {
     background-color: #eaeaea;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 /**************SEARCH**********/
 .search {
     display: flex;
@@ -94,22 +95,22 @@ a {
 
 
 .search__heading {
-   /* display: flex;*/
+    /* display: flex;*/
     justify-content: center;
     /*white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;*/
-font-family: Roboto;
-font-size: 24px;
-font-weight: 700;
-line-height: 28.13px;
-text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+    text-align: center;
 
 }
 
 .line-break {
-   /* white-space: normal;*/
-    display:block
+    /* white-space: normal;*/
+    display: block
 }
 
 .search__discover {
@@ -133,6 +134,7 @@ text-align: center;
 
 
 }
+
 /*********************fonctionnement**************/
 .tuto {
     display: flex;
@@ -217,14 +219,11 @@ ol {
     max-width: 1280px;*/
 
     position: relative;
-   /* padding-left: 17px;
+    /* padding-left: 17px;
     padding-right: 18px;*/
     background-color: #f6f6f6;
     padding: 2rem 1rem;
-    margin-top:3rem
-
-
-
+    margin-top: 3rem
 }
 
 .restaurants__title {
@@ -233,7 +232,7 @@ ol {
     align-items: center;
     font: 700;
     size: 24px;*/
-   /* padding-top: 54px;*/
+    /* padding-top: 54px;*/
     margin-left: 3px;
     margin-bottom: 25px;
     font-family: roboto;
@@ -289,10 +288,10 @@ ol {
     text-decoration: none;
     color: inherit;
     display: block;
-   /* height: 100%;*/
-   /* aspect-ratio: auto 340/251;*/
+    /* height: 100%;*/
+    /* aspect-ratio: auto 340/251;*/
     margin: 2rem 0;
-    
+
 
 }
 
@@ -372,19 +371,23 @@ figcaption {
     display: flex;
     position: relative;
     justify-content: center;
-     cursor: pointer;
+    cursor: pointer;
 }
+
 .fas fa-heart {
-    display:none
+    display: none
 }
+
 .fas fa-heart:active {
     color: purple;
     background-color: linear-gradient(to bottom, #ff79da 0%, #9356DC 100%);
-}    
+}
+
 .heart:hover {
-    color: purple; 
+    color: purple;
     background-color: linear-gradient(to bottom, #ff79da 0%, #9356DC 100%);
 }
+
 /*    
 .restaurants_card-content>.heart>.far+.fas {
     position: absolute;
@@ -404,7 +407,7 @@ figcaption {
     text-align: left;
     letter-spacing: 0em;
     margin: 0;
-    
+
 
 }
 
