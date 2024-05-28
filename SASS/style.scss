@@ -6,6 +6,28 @@
     z-index: 10;
 }
 
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px 0px rgba (0, 0, 0, 0, 0.6);
+}
+
+@mixin button-style {
+    opacity: 1;
+    background: $gradient;
+    color: white;
+    padding: 0 20px;
+    border-radius: 200px;
+    box-shadow: 0px 0px 10px 0px rgba (0, 0, 0, 0, 0.3);
+}
+
 body {
     min-width: 300px;
 }
@@ -17,7 +39,7 @@ $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
 
-.header {
+$gradient: linear-gradient(180deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%) .header {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -31,7 +53,8 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
         margin: auto;
     }
 
-    >.logo {
+    // >.logo {
+    &__logo {
         border: none;
         background-color: transparent;
         cursor: pointer;
@@ -43,7 +66,7 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
         margin: auto;
     }
 
-    &__location {
+    &__loca {
         grid-column-start: 1;
         grid-row-start: 1;
         display: flex;
@@ -76,55 +99,55 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     }
 }
 
-.headerbot {
-    &__book {
-        background-color: #f6f6f6;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 2rem 2rem 3.5rem 2rem;
+.search {
+    //&__book {//
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 2rem 3.5rem 2rem;
 
-        >h1 {
-            font-size: 1.8em;
-            padding: 1rem 0;
-        }
-
-        >p {
-            color: $text-desc;
-            font-size: 1.1em;
-        }
-
-        @media screen and (min-width: 702px) {
-            box-shadow: inset 0px 20px 15px -20px #bdbcbc;
-        }
+    >h1 {
+        font-size: 1.8em;
+        padding: 1rem 0;
     }
 
-    &--btn {
-        margin-top: 30px;
-        border: none;
-        border-radius: 100px;
+    >p {
+        color: $text-desc;
         font-size: 1.1em;
-        font-weight: 500;
-        background-size: 450%;
-        background-image: linear-gradient(to left top,
-                $color-secondary,
-                $color-primary,
-                $color-secondary );
-        color: white;
-        padding: 1.2rem 1.6rem;
-        transition: 0.3s all ease-in-out;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
-            rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
-
-        &:hover {
-            cursor: pointer;
-            background-position: right top;
-            transition: 0.3s all ease-in-out;
-            box-shadow: rgba(0, 0, 0, 0.4) 0px 12px 28px 0px,
-                rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
-        }
     }
+
+    @media screen and (min-width: 702px) {
+        box-shadow: inset 0px 20px 15px -20px #bdbcbc;
+    }
+}
+
+&__btn {
+    margin-top: 30px;
+    border: none;
+    border-radius: 100px;
+    font-size: 1.1em;
+    font-weight: 500;
+    background-size: 450%;
+    background-image: linear-gradient(to left top,
+            $color-secondary,
+            $color-primary,
+            $color-secondary );
+    color: white;
+    padding: 1.2rem 1.6rem;
+    transition: 0.3s all ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+        rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+
+    &:hover {
+        cursor: pointer;
+        background-position: right top;
+        transition: 0.3s all ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 12px 28px 0px,
+            rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+    }
+}
 }
 
 .tuto {
@@ -212,7 +235,7 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     }
 }
 
-.places {
+.restaurants {
     background-color: #f6f6f6;
     margin-top: 3rem;
     padding: 3rem 1.5rem;
