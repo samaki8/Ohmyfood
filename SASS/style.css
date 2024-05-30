@@ -89,12 +89,14 @@ body {
 }
 
 .tuto__title {
-  margin: 3rem 1.5rem;
+  margin: 3rem 5rem 1.625rem 1.25rem;
 }
-@media screen and (min-width: 702px) {
+@media screen and (min-width: 720px) {
   .tuto__title {
     display: flex;
-    justify-content: center;
+    margin-top: 3.125rem;
+    margin-left: 13%;
+    margin-bottom: 1.563rem;
   }
 }
 .tuto__cards {
@@ -103,14 +105,16 @@ body {
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 702px) {
+@media screen and (min-width: 720px) {
   .tuto__cards {
     display: grid;
     justify-content: center;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-columns: auto 1fr 1fr 1fr auto;
     box-sizing: border-box;
     margin: auto;
     max-width: 1440px;
+    gap: 36px;
+    margin: 0 180px 50px 180px;
   }
 }
 .tuto__card1 {
@@ -169,12 +173,20 @@ body {
   margin-top: 3rem;
   padding: 3rem 1.5rem;
 }
+@media screen and (min-width: 720px) {
+  .places {
+    padding: 1rem 4rem;
+  }
+}
 .places > h2 {
   display: flex;
 }
-@media screen and (min-width: 702px) {
+@media screen and (min-width: 720px) {
   .places > h2 {
-    justify-content: center;
+    display: flex;
+    margin-top: 1.125rem;
+    margin-left: 8%;
+    margin-bottom: 1.125rem;
   }
 }
 .places__cards--card > img {
@@ -282,6 +294,10 @@ body {
 .footer {
   background-color: #353535;
   padding: 1.8rem 1.8rem 4rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  line-height: 2rem;
 }
 .footer__block {
   display: grid;
@@ -289,6 +305,12 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   max-width: 1440px;
   margin: auto;
+}
+@media screen and (min-width: 702px) {
+  .footer__block {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 .footer__link {
   margin: auto;

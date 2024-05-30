@@ -282,6 +282,15 @@ body {
   }
 }
 
+@keyframes move-card {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+    transform: translateY(-45px);
+  }
+}
 .footer {
   background-color: #353535;
   padding: 1.8rem 1.8rem 4rem 1.8rem;
