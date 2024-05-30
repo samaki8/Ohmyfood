@@ -366,15 +366,11 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     }
 }
 
+// Footer
+
 .footer {
     background-color: #353535;
     padding: 1.8rem 1.8rem 4rem 1.8rem;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.2em;
-    line-height: 2rem;
-
-
 
     &__block {
         display: grid;
@@ -385,7 +381,7 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
 
         @media screen and (min-width: 702px) {
             display: flex;
-            flex-direction: row-reverse;
+            justify-content: space-between;
         }
     }
 
@@ -398,16 +394,12 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
                 transition-duration: 0.2s;
                 width: fit-content;
 
-                >button {
-                    background-color: transparent;
-                    border: none;
-                    outline: none;
+                >a {
                     text-decoration: none;
                     color: white;
                     font-family: $font-title;
                     font-weight: 100;
                     font-size: 1.5em;
-                    cursor: pointer;
                 }
 
                 &:hover {
@@ -423,6 +415,11 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
                     -webkit-text-fill-color: transparent;
                     -moz-text-fill-color: transparent;
                 }
+
+                @media screen and (min-width: 702px) {
+                    order: -1;
+                    margin-left: auto;
+                }
             }
         }
 
@@ -431,11 +428,19 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
         font-size: 1.2em;
         line-height: 2rem;
 
+        @media screen and (min-width: 702px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
         >a {
             text-decoration: none;
             color: white;
             transition-duration: 0.2s;
             width: fit-content;
+
+            @media screen and (min-width: 702px) {}
 
             >i {
                 font-size: 18px;

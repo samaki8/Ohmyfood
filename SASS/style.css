@@ -294,10 +294,6 @@ body {
 .footer {
   background-color: #353535;
   padding: 1.8rem 1.8rem 4rem 1.8rem;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.2em;
-  line-height: 2rem;
 }
 .footer__block {
   display: grid;
@@ -309,7 +305,7 @@ body {
 @media screen and (min-width: 702px) {
   .footer__block {
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 }
 .footer__link {
@@ -325,16 +321,12 @@ body {
   width: -moz-fit-content;
   width: fit-content;
 }
-.footer__link--title > h2 > button {
-  background-color: transparent;
-  border: none;
-  outline: none;
+.footer__link--title > h2 > a {
   text-decoration: none;
   color: white;
   font-family: "Shrikhand", cursive;
   font-weight: 100;
   font-size: 1.5em;
-  cursor: pointer;
 }
 .footer__link--title > h2:hover {
   cursor: pointer;
@@ -346,6 +338,19 @@ body {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+@media screen and (min-width: 702px) {
+  .footer__link--title > h2 {
+    order: -1;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 702px) {
+  .footer__link {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }
 .footer__link > a {
   text-decoration: none;
