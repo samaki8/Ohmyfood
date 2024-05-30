@@ -1,0 +1,189 @@
+```scss // Importation des polices
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
+
+// Variables
+$font-primary: 'Roboto', sans-serif;
+$font-title: 'Shrikhand';
+$main-color: #0065FC;
+$main-bg-color: #F2F2F2;
+$filter-bg-color: #DEEBFF;
+$section-bg-color: #eaeaeaf6;
+$shadow-small: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$shadow-medium: 0px 4px 10px rgba(0, 0, 0, 0.25);
+$shadow-large: 0px 4px 8px rgba(0, 0, 0, 0.1);
+$gradient-primary: linear-gradient(to bottom, #ff79da 0%, #9356DC 100%);
+$color-tag-bg: #99e2d0;
+$color-tag-text: #1b6150;
+$color-footer-bg: #353535;
+$color-footer-text: white;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-style {
+    background-image: $gradient-primary;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: $shadow-medium;
+}
+
+// Styles de base
+* {
+    font-family: $font-primary;
+    margin: 0;
+}
+
+body {
+    @include flex-center;
+    scroll-behavior: smooth;
+    min-width: 300px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section {
+    @include flex-center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: $section-bg-color;
+    animation: stopspin 0.01s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
+}
+
+.container {
+    width: 100%;
+}
+
+// En-tête
+.header {
+    &__container {
+        @include flex-center;
+        width: 100%;
+        height: 63px;
+    }
+
+    &_logo {
+        height: 36px;
+        width: 197px;
+    }
+
+    &__loca {
+        @include flex-center;
+        gap: 15px;
+        background-color: $filter-bg-color;
+        //box-shadow: $shadow-small;
+    }
+}
+
+// Recherche
+.search {
+    @include flex-center;
+    flex-direction: column;
+    margin: 0 30px;
+    text-align: center;
+
+    &__heading {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28.13px;
+    }
+
+    &__discover {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    &__btn {
+        @include button-style;
+    }
+}
+
+// Tutoriel
+.tuto {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+
+    &__steps {
+        @include flex-center;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    &__step {
+        padding: 0px 10px;
+        margin: 10px;
+        background-color: $main-bg-color;
+        border-radius: 20px;
+        box-shadow: $shadow-large;
+    }
+}
+
+// Liste des restaurants
+.restaurants {
+    position: relative;
+    background-color: $main-bg-color;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+
+    &__title {
+        font-family: $font-primary;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28.13px;
+        text-align: left;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 18px;
+        margin-bottom: 66px;
+    }
+
+    &__card {
+        background-color: #fff;
+        border-radius: 15px;
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        margin: 2rem 0;
+    }
+}
+
+// Pied de page
+.footer {
+    background-color: $color-footer-bg;
+    color: $color-footer-text;
+    padding: 22px 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    &__logo {
+        font-family: $font-title;
+    }
+}

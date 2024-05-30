@@ -52,12 +52,7 @@ a {
 }
 
 /*****************************header**********************/
-/*
-.header {
-    height: 113px;
-    width: 375px;
-}
-*/
+
 .header__container {
     display: flex;
     justify-content: center;

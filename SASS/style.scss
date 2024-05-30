@@ -6,33 +6,11 @@
     z-index: 10;
 }
 
-@mixin flexbox-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin button-hover {
-    opacity: 0.8;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0px 0px 10px 0px rgba (0, 0, 0, 0, 0.6);
-}
-
-@mixin button-style {
-    opacity: 1;
-    background: $gradient;
-    color: white;
-    padding: 0 20px;
-    border-radius: 200px;
-    box-shadow: 0px 0px 10px 0px rgba (0, 0, 0, 0, 0.3);
-}
-
 body {
     min-width: 300px;
 }
 
-$font-title: "Shrikhand";
+$font-title: "Shrikhand", cursive;
 $text-desc: #353535;
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
@@ -44,31 +22,29 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     justify-content: center;
     flex-direction: column;
 
-    @media screen and (min-width: 702px) {
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr 1fr 1fr;
+    //  @media screen and (min-width: 702px) {
+    //display: grid;
+    // align-items: center;
+    // grid-template-columns: auto 1fr auto;
 
-        max-width: 1440px;
-        margin: auto;
-    }
+    //max-width: 1440px;
+    //margin: auto;
 
-    // >.logo {
-    &__logo {
+
+    >.logo {
         border: none;
         background-color: transparent;
         cursor: pointer;
         align-self: center;
-        align-self: center;
-        width: 200px;
+        //width: 200px;
         padding: 1.5rem 0 1rem 0;
-        grid-column-start: 2;
+        // grid-column-start: 2;
         margin: auto;
     }
 
-    &__loca {
-        grid-column-start: 1;
-        grid-row-start: 1;
+    &__location {
+        //grid-column-start: 2;
+        //grid-row-start: 2;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -89,40 +65,43 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
             @media screen and (min-width: 702px) {
                 transform: translateX(-12px);
             }
-        }
 
-        @media screen and (min-width: 702px) {
-            width: fit-content;
-            padding: 1rem 0.8rem 1rem 1.8rem;
-            border-radius: 14px;
         }
     }
 }
 
-.search {
-    //&__book {//
-    background-color: #f6f6f6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 2rem 3.5rem 2rem;
+// @media screen and (min-width: 702px) {
+// width: fit-content;
+//   padding: 1rem 0.8rem 1rem 1.8rem;
+// border-radius: 14px;
 
-    >h1 {
-        font-size: 1.8em;
-        padding: 1rem 0;
+
+
+.headerbot {
+    &__book {
+        background-color: #f6f6f6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 2rem 3.5rem 2rem;
+
+        >h1 {
+            font-size: 1.8em;
+            padding: 1rem 0;
+        }
+
+        >p {
+            color: $text-desc;
+            font-size: 1.1em;
+        }
+
+        @media screen and (min-width: 702px) {
+            box-shadow: inset 0px 20px 15px -20px #bdbcbc;
+        }
     }
 
-    >p {
-        color: $text-desc;
-        font-size: 1.1em;
-    }
-
-    @media screen and (min-width: 702px) {
-        box-shadow: inset 0px 20px 15px -20px #bdbcbc;
-    }
-
-    &__btn {
+    &--btn {
         margin-top: 30px;
         border: none;
         border-radius: 100px;
@@ -149,12 +128,11 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     }
 }
 
-
 .tuto {
     &__title {
         margin: 3rem 1.5rem;
 
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: 702px) {
             display: flex;
             justify-content: center;
         }
@@ -166,7 +144,7 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
         flex-direction: column;
         align-items: center;
 
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: 702px) {
             display: grid;
             justify-content: center;
             grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
@@ -191,13 +169,13 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
         box-shadow: $shadow-card;
         transition: 0.2s ease-in-out;
 
-        @media screen and (min-width: 900px) {
-            padding: 5rem 1rem;
+        @media screen and (min-width: 702px) {
+            padding: 1.75rem 1rem;
         }
 
         &:hover {
             cursor: pointer;
-            background-color: #9256dc1a;
+
         }
 
         &:hover>.tuto__card--info>i {
@@ -235,7 +213,7 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     }
 }
 
-.restaurants {
+.places {
     background-color: #f6f6f6;
     margin-top: 3rem;
     padding: 3rem 1.5rem;
@@ -243,7 +221,7 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     >h2 {
         display: flex;
 
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: 702px) {
             justify-content: center;
         }
     }

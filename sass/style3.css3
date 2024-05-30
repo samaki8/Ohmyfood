@@ -7,7 +7,37 @@
 }
 
 body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: Roboto, sans-serif;
   min-width: 300px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(234, 234, 234, 0.9647058824);
+  animation: stopspin 0.01s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
+}
+
+.container {
+  width: 100%;
 }
 
 .header {
@@ -15,15 +45,29 @@ body {
   justify-content: center;
   flex-direction: column;
 }
-.header > .logo {
+@media screen and (min-width: 702px) {
+  .header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1440px;
+    margin: auto;
+  }
+}
+.header__logo {
   border: none;
   background-color: transparent;
   cursor: pointer;
   align-self: center;
+  align-self: center;
+  width: 200px;
   padding: 1.5rem 0 1rem 0;
+  grid-column-start: 2;
   margin: auto;
 }
-.header__location {
+.header__loca {
+  grid-column-start: 1;
+  grid-row-start: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,19 +79,27 @@ body {
   color: #353535;
   text-shadow: 0px 0px 0px #626262;
 }
-.header__location > .iconlocation {
+.header__loca > .iconlocation {
   font-size: 16px;
   transform: translateY(-2px) translateX(-20px);
   color: #353535;
   text-shadow: 0px 0px 0px #626262;
 }
 @media screen and (min-width: 702px) {
-  .header__location > .iconlocation {
+  .header__loca > .iconlocation {
     transform: translateX(-12px);
   }
 }
+@media screen and (min-width: 702px) {
+  .header__loca {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1rem 0.8rem 1rem 1.8rem;
+    border-radius: 14px;
+  }
+}
 
-.headerbot__book {
+.search {
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
@@ -55,20 +107,20 @@ body {
   text-align: center;
   padding: 2rem 2rem 3.5rem 2rem;
 }
-.headerbot__book > h1 {
+.search > h1 {
   font-size: 1.8em;
   padding: 1rem 0;
 }
-.headerbot__book > p {
+.search > p {
   color: #353535;
   font-size: 1.1em;
 }
 @media screen and (min-width: 702px) {
-  .headerbot__book {
+  .search {
     box-shadow: inset 0px 20px 15px -20px #bdbcbc;
   }
 }
-.headerbot--btn {
+.search__btn {
   margin-top: 30px;
   border: none;
   border-radius: 100px;
@@ -81,7 +133,7 @@ body {
   transition: 0.3s all ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
 }
-.headerbot--btn:hover {
+.search__btn:hover {
   cursor: pointer;
   background-position: right top;
   transition: 0.3s all ease-in-out;
@@ -91,7 +143,7 @@ body {
 .tuto__title {
   margin: 3rem 1.5rem;
 }
-@media screen and (min-width: 702px) {
+@media screen and (min-width: 900px) {
   .tuto__title {
     display: flex;
     justify-content: center;
@@ -103,7 +155,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 702px) {
+@media screen and (min-width: 900px) {
   .tuto__cards {
     display: grid;
     justify-content: center;
@@ -127,13 +179,14 @@ body {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
   transition: 0.2s ease-in-out;
 }
-@media screen and (min-width: 702px) {
+@media screen and (min-width: 900px) {
   .tuto__card {
-    padding: 1.75rem 1rem;
+    padding: 5rem 1rem;
   }
 }
 .tuto__card:hover {
   cursor: pointer;
+  background-color: rgba(146, 86, 220, 0.1019607843);
 }
 .tuto__card:hover > .tuto__card--info > i {
   color: #9356dc;
@@ -164,20 +217,20 @@ body {
   padding-left: 1rem;
 }
 
-.places {
+.restaurants {
   background-color: #f6f6f6;
   margin-top: 3rem;
   padding: 3rem 1.5rem;
 }
-.places > h2 {
+.restaurants > h2 {
   display: flex;
 }
-@media screen and (min-width: 702px) {
-  .places > h2 {
+@media screen and (min-width: 900px) {
+  .restaurants > h2 {
     justify-content: center;
   }
 }
-.places__cards--card > img {
+.restaurants__cards--card > img {
   width: 100%;
   height: 190px;
   overflow: hidden;
@@ -185,7 +238,7 @@ body {
      object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-.places__cards--card > .new {
+.restaurants__cards--card > .new {
   position: absolute;
   padding: 0.4rem 0.8rem;
   background-color: #99e2d0;
@@ -195,7 +248,7 @@ body {
   right: 0.8rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.places__cards--card {
+.restaurants__cards--card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -207,35 +260,35 @@ body {
   transition: 0.2s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
 }
-.places__cards--card:hover {
+.restaurants__cards--card:hover {
   transition: 0.2s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
 }
-.places__cards--card1 {
+.restaurants__cards--card1 {
   grid-column-start: 2;
 }
-.places__cards--card2 {
+.restaurants__cards--card2 {
   grid-column-start: 3;
 }
-.places__cards--card3 {
+.restaurants__cards--card3 {
   grid-column-start: 2;
   grid-row-start: 2;
 }
-.places__cards--card4 {
+.restaurants__cards--card4 {
   grid-column-start: 3;
   grid-row-start: 2;
 }
-.places__cards--info {
+.restaurants__cards--info {
   padding: 0.8rem;
   line-height: 1.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.places__cards--info--text > p {
+.restaurants__cards--info--text > p {
   color: #353535;
 }
-.places__cards--info > .heart {
+.restaurants__cards--info > .heart {
   font-size: 1.6em;
   padding-right: 1rem;
   height: 18px;
@@ -244,19 +297,19 @@ body {
   position: relative;
   justify-content: center;
 }
-.places__cards--info > .heart > .far + .fas {
+.restaurants__cards--info > .heart > .far + .fas {
   position: absolute;
 }
-.places__cards--info > .heart > .fas {
+.restaurants__cards--info > .heart > .fas {
   opacity: 0;
   color: #9356dc;
   transition: 0.2s ease-in-out;
 }
-.places__cards--info > .heart:hover .far {
+.restaurants__cards--info > .heart:hover .far {
   opacity: 0;
   transition-duration: 0.2s;
 }
-.places__cards--info > .heart:hover > .fas {
+.restaurants__cards--info > .heart:hover > .fas {
   transform: scale(1.2);
   display: flex;
   position: absolute;
@@ -269,7 +322,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 @media screen and (min-width: 702px) {
-  .places__cards {
+  .restaurants__cards {
     max-width: 1440px;
     display: grid;
     justify-content: center;
@@ -309,7 +362,7 @@ body {
   outline: none;
   text-decoration: none;
   color: white;
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand";
   font-weight: 100;
   font-size: 1.5em;
   cursor: pointer;
@@ -344,4 +397,4 @@ body {
 .footer__link > a:hover {
   color: #9356dc;
   transition-duration: 0.2s;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style3.css.map */
