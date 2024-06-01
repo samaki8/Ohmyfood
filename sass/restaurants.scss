@@ -33,12 +33,23 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
             text-decoration: none;
             color: $text-desc;
             margin: auto;
+
+            @media screen and (min-width: 702px) {
+                margin-left: 17px;
+            }
         }
+
 
         >.logolink {
             grid-column-start: 2;
             padding: 1.5rem 0 1rem 0;
             margin: auto;
+
+            @media screen and (min-width: 702px) {
+                justify-self: center;
+                align-self: center;
+            }
+
         }
     }
 
@@ -66,7 +77,8 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     background-color: #f6f6f6;
     padding: 2.2rem 1.2rem;
     border-radius: 35px 35px 0 0;
-    max-width: 1300px;
+    max-width: 1055px;
+    max-height: 1221px;
     margin: auto auto -80px auto;
     transition-duration: 0.4s;
 
@@ -110,7 +122,7 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     &__top {
         display: flex;
         justify-content: center;
-        gap: 1.5px;
+        gap: 18px;
 
         >h1 {
             font-family: $font-title;
@@ -212,8 +224,12 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
 
         &__title {
             >h2 {
-                font-size: 1.2em;
-                font-weight: 100;
+                color: #000;
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
                 text-transform: uppercase;
             }
 
@@ -247,6 +263,8 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
                 }
             }
 
+            max-width:634px;
+            max-height: 69px;
             position: relative;
             top: 45px;
             overflow: hidden;
@@ -263,8 +281,16 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
             margin-bottom: 1rem;
 
             >h2 {
-                font-size: 1.2em;
-                font-weight: 600;
+                overflow: hidden;
+                color: #000;
+
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-family: Roboto;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
             }
 
             &--info {
@@ -280,16 +306,21 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
                     background-color: #fff;
                     right: 0;
                     bottom: 0.95rem;
-                    font-weight: 500;
+                    font-size: 15.043px;
                     transition: 0.4s ease-in-out;
+                    font-weight: 700;
                 }
 
                 >p {
-                    font-size: 1em;
-                    font-weight: 100;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
                     overflow: hidden;
+                    color: #000;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-family: Roboto;
+                    font-size: 15.043px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
                 }
 
                 &--check {
@@ -329,7 +360,7 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
     .menu {
         @media screen and (min-width: 1381px) {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
             column-gap: 5rem;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -359,8 +390,8 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
 
     @media screen and (min-width: 702px) {
         display: flex;
-        width: 100%;
-        height: 114px;
+        max-height: 114px;
+        max-width: 1440px;
         padding: 30px 25px;
         justify-content: flex-end;
         align-items: flex-end;
@@ -445,9 +476,6 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
                 // height: 27px;
         }
     }
-
-
-
 
     &__links {
         display: flex;
