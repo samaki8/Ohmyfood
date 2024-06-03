@@ -148,6 +148,10 @@ body {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.order .menu {
+  margin: 0 auto;
+  max-width: 604px;
+}
 .order .repas {
   padding-top: 2rem;
 }
@@ -298,9 +302,15 @@ body {
 }
 @media screen and (min-width: 600px) and (max-width: 1380px) {
   .order {
-    width: 550px;
+    width: 730px;
     margin: auto;
     margin-bottom: -80px;
+  }
+}
+@media screen and (min-width: 1381px) {
+  .order {
+    Width: 1440px;
+    margin: 0 AUTO;
   }
 }
 
