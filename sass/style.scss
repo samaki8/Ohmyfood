@@ -374,11 +374,12 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
 .footer {
     background-color: #353535;
     padding: 22px 25px;
+    //width: 100%;
 
     @media screen and (min-width: 702px) {
         display: flex;
         max-height: 114px;
-        max-width: 1440px;
+        //max-width: 1440px;
         padding: 30px 25px;
         justify-content: flex-end;
         align-items: flex-end;
@@ -453,14 +454,7 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
             justify-content: center;
             align-items: center;
             flex-shrink: 0;
-            margin-left: 30px // order: -1;
-                // margin-left: auto;
-                // margin-bottom: -24px;
-                //margin-left: 18px;
-                //margin: 10px 7px 17px 18px;
-                //display: flex;
-                // width: 139px;
-                // height: 27px;
+            margin-left: 40px;
         }
     }
 
@@ -507,7 +501,7 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
         @media screen and (min-width: 702px) {
             display: flex;
             align-items: flex-start;
-            gap: 7px;
+            gap: 40px;
             flex-direction: row;
         }
 

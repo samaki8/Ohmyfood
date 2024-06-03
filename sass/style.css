@@ -300,7 +300,6 @@ body {
   .footer {
     display: flex;
     max-height: 114px;
-    max-width: 1440px;
     padding: 30px 25px;
     justify-content: flex-end;
     align-items: flex-end;
@@ -366,7 +365,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    margin-left: 30px;
+    margin-left: 40px;
   }
 }
 .footer__links {
@@ -406,7 +405,7 @@ body {
   .footer__links {
     display: flex;
     align-items: flex-start;
-    gap: 7px;
+    gap: 40px;
     flex-direction: row;
   }
 }/*# sourceMappingURL=style.css.map */
