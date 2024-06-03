@@ -267,8 +267,8 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
                 }
             }
 
-            max-width:634px;
-            max-height: 69px;
+            max-width:604px;
+            max-height: 42px;
             position: relative;
             top: 45px;
             overflow: hidden;
@@ -361,18 +361,19 @@ $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
         margin-bottom: -80px;
     }
 
-    .menu {
-        @media screen and (min-width: 1381px) {
-            display: grid;
-            grid-template-columns: 1fr;
-            column-gap: 5rem;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+    //.menu {
+    // @media screen and (min-width: 1381px) {
+    //   display: grid;
+    // grid-template-columns: 1fr;
+    //column-gap: 5rem;
+    //white-space: nowrap;
+    //text-overflow: ellipsis;
+    //justify-items: center;
 
-            // 1380px
-        }
-    }
+    // 1380px
+    //}
 }
+
 
 @keyframes move-card {
     0% {

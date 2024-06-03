@@ -202,8 +202,8 @@ body {
   margin: 5px 0 1.2rem 0;
 }
 .order .repas__card {
-  max-width: 634px;
-  max-height: 69px;
+  max-width: 604px;
+  max-height: 42px;
   position: relative;
   top: 45px;
   overflow: hidden;
@@ -301,16 +301,6 @@ body {
     width: 550px;
     margin: auto;
     margin-bottom: -80px;
-  }
-}
-@media screen and (min-width: 1381px) {
-  .order .menu {
-    display: grid;
-    grid-template-columns: 1fr;
-    -moz-column-gap: 5rem;
-         column-gap: 5rem;
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
 }
 
