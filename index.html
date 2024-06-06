@@ -21,19 +21,29 @@
     <script src="https://kit.fontawesome.com/e9ad2cc302.js" crossorigin="anonymous"></script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./sass/style.css">
     <link rel="stylesheet" href="./sass/loader.css">
+    <link rel="stylesheet" href="./sass/style.css">
+
 
 </head>
 
 <body>
-    <section class="section">
-        <div class="loader" id="loader">
+    <section class="sectionloader" id="loader">
+        <div class="loader">
             <h2 class="titleloader">OhMyFood</h2>
             <div class="progress-bar"></div>
         </div>
+        <script type="text/javascript">
+            <!-- C'est le setTimeout que je vous parlais -->
+            var loadpage = setTimeout(loadpage, 6000);
+            function loadpage() {
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('page-content').style.display = 'block';
+
+            }
+        </script>
     </section>
-    <header class="header">
+    <header class="header" id="page-content">
         <button class="logo" onClick="window.location.reload();">
             <img id="top" src="./images/logo/ohmyfood@2x.svg" alt="logo-ohmyfood">
         </button>
@@ -170,14 +180,7 @@
             </nav>
         </div>
     </footer>
-    <script>
-        window.addEventListener("load", function () {
-            var loader = document.getElementById("loader");
-            loader.style.display = "none";  // cacher le loader
-            document.body.style.opacity = "1";  // afficher le contenu de la page
-        });
 
-    </script>
 </body>
 
 </html>

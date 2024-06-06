@@ -1,43 +1,49 @@
-body {
-  opacity: 0;
-  transition: opacity 0.25s ease-in-out;
-  background: color #000;
-}
-
-.loader {
+.sectionloader {
   position: fixed;
-  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
   top: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  z-index: 9999;
-  background: #fff;
-  text-align: center;
-  padding: 20px;
+  background: rgba(234, 234, 234, 0.9647058824);
 }
-.loader > .titleloader {
-  margin-bottom: 20px;
-  padding: 0.4rem;
-  font-family: "Shrikhand", cursive;
-  font-size: 3em;
-  background: linear-gradient(90deg, #9356dc, #ff79da, #9356dc);
-  background-size: 400%;
-  animation: animate 6s linear infinite;
+.sectionloader > .loader {
+  position: fixed;
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 300px;
 }
-.loader > .progress-bar {
-  height: 20px;
-  width: 100%;
-  background-color: #f3f3f3;
+.sectionloader > .loader > .titleloader {
+  font-size: 60px;
+  background: linear-gradient(270deg, #9356dc, #ff79da);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease-in-out infini;
+}
+.sectionloader > .loader > .progress-bar {
+  height: 5px;
+  width: 80%;
+  background-color: #ff79da;
   border-radius: 10px;
   overflow: hidden;
 }
-.loader::before {
+.sectionloader > .loader > .progress-bar::before {
   content: "";
   display: block;
   height: 100%;
   width: 0;
-  background-color: #ff6347;
+  background-color: #9356dc;
   animation: loading 2s linear infinite;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  animation-duration: 5s;
 }
 
 @keyframes loading {
@@ -46,5 +52,24 @@ body {
   }
   100% {
     width: 100%;
+  }
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }/*# sourceMappingURL=loader.css.map */
