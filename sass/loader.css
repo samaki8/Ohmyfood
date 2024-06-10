@@ -12,24 +12,24 @@
   background: rgba(234, 234, 234, 0.9647058824);
 }
 .sectionloader > .loader {
-  position: fixed;
-  width: 60%;
-  height: 60%;
+  width: 300px;
+  height: 300px;
   display: inline-block;
   vertical-align: middle;
-  border-radius: 300px;
 }
 .sectionloader > .loader > .titleloader {
-  font-size: 60px;
-  background: linear-gradient(270deg, #9356dc, #ff79da);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
+  padding: 0.4rem;
+  font-family: "Shrikhand", cursive;
+  font-size: 3em;
+  background: linear-gradient(90deg, #9356dc, #ff79da, #9356dc);
+  background-size: 800%;
   -webkit-text-fill-color: transparent;
-  animation: gradient 5s ease-in-out infini;
+  -webkit-background-clip: text;
+  animation: animate 6s linear infinite;
 }
 .sectionloader > .loader > .progress-bar {
   height: 5px;
-  width: 80%;
+  width: 100%;
   background-color: #ff79da;
   border-radius: 10px;
   overflow: hidden;
@@ -40,9 +40,8 @@
   height: 100%;
   width: 0;
   background-color: #9356dc;
-  animation: loading 2s linear infinite;
+  animation: loading 6s linear infinite;
   animation-delay: 1s;
-  animation-fill-mode: both;
   animation-duration: 5s;
 }
 
@@ -52,6 +51,8 @@
   }
   100% {
     width: 100%;
+    animation-delay: 1s;
+    animation-duration: 0.5s;
   }
 }
 @keyframes animate {
@@ -59,17 +60,6 @@
     background-position: 0%;
   }
   100% {
-    background-position: 400%;
-  }
-}
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+    background-position: 600%;
   }
 }/*# sourceMappingURL=loader.css.map */

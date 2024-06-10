@@ -176,7 +176,7 @@ body {
 }
 @media screen and (min-width: 720px) {
   .places {
-    padding: 1rem 4rem;
+    padding: 30px 0px;
   }
 }
 .places > h2 {
@@ -185,9 +185,9 @@ body {
 @media screen and (min-width: 720px) {
   .places > h2 {
     display: flex;
-    margin-top: 1.125rem;
-    margin-left: 8%;
-    margin-bottom: 1.125rem;
+    margin-top: 3.125rem;
+    margin-left: 11%;
+    margin-bottom: 1.563rem;
   }
 }
 .places__cards--card > img {
